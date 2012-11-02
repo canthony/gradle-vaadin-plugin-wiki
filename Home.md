@@ -1,0 +1,1 @@
+Welcome to the gradle-vaadin-plugin wiki!
