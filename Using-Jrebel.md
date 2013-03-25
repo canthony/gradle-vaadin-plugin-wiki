@@ -4,7 +4,7 @@ Once you have JRebel installed locate where your rebel.jar and add the following
 ```
 vaadin{
     jrebel.enabled = true
-    jrebel.location = /path/to/your/jrebel.jar
+    jrebel.location = '/path/to/your/jrebel.jar'
 }
 ```
 After that whenever you run your application with vaadinRun or devmode, Jrebel will be invoked automatically.
