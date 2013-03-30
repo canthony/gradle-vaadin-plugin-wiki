@@ -3,8 +3,10 @@ To use JRebel you will need a valid JRebel license and JRebel installed on your 
 Once you have JRebel installed locate where your rebel.jar and add the following to your gradle build script
 ```
 vaadin{
-    jrebel.enabled = true
-    jrebel.location = '/path/to/your/jrebel.jar'
+    jrebel {
+        enabled = true
+        location = '/path/to/your/jrebel.jar'
+    }   
 }
 ```
-After that whenever you run your application with vaadinRun or devmode, Jrebel will be invoked automatically.
+After that whenever you run your application with vaadinRun, devmode or superdevmode Jrebel will be invoked automatically.
