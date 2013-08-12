@@ -4,8 +4,8 @@ Once you have JRebel installed locate where your rebel.jar and add the following
 ```
 vaadin{
     jrebel {
-        enabled = true
-        location = '/path/to/your/jrebel.jar'
+        enabled true
+        location '/path/to/your/jrebel.jar'
     }   
 }
 ```
