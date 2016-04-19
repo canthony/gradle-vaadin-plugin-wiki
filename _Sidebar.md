@@ -1,5 +1,6 @@
 1. [[Home]]
 1. [[Getting Started]]
+    1. [[Getting started on the console]]
     1. [[Getting started in Eclipse]]
     1. [[Getting started in Intellij IDEA]]
 1. [[Creating and running a project]]
