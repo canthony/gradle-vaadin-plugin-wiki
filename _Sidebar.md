@@ -3,7 +3,7 @@
     1. [[Getting Started on the console]]
     1. [[Getting Started in Eclipse]]
     1. [[Getting Started in Intellij IDEA]]
-1. [[Creating and running a project]]
+1. [[Using addons in the project]]
 1. [[Using client side code in your project]]
 1. [[Creating a multi-module addon project]]
 1. [[Advanced]]
