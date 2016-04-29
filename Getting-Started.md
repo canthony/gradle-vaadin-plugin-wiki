@@ -2,7 +2,7 @@ The first thing you need to do is decide how you want to develop your project. T
 
 Once you have made your choice continue with one of the following:
 
-1. [[Getting started on the console]]
-1. [[Getting started in Eclipse]]
-1. [[Getting started in Intellij IDEA]]
+1. [[Getting Started on the console]]
+1. [[Getting Started in Eclipse]]
+1. [[Getting Started in Intellij IDEA]]
 
