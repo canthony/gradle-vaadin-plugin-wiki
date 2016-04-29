@@ -1,11 +1,11 @@
-### Installing Gradle support in Eclipse
+## Installing Gradle support in Eclipse
 As of writing the Eclipse Gradle support is only bundled with the Java, Committer and RAP/RCP distributions of Eclipse Neon which means that if you are a Vaadin developer you most likely have the Java EE version and will need to manually install the Gradle support. Hopefully this will change in the future.
 
 To install the Gradle support in Eclipse we need to install a eclipse plugin called Gradle BuildShip which is the official Gradle support provided by the Eclipse Foundation. We can do that from the Eclipse Marketplace by searching for “buildship” and pressing install.
 
 ![Eclipse Marketplace Install Buildship](images/eclipse-marketplace-install-buildship.png)
 
-### Creating a Vaadin Gradle Project
+## Creating a Vaadin Gradle Project
 
 To create a Gradle project, we will use the Gradle Project wizard. 
 
@@ -43,11 +43,11 @@ Once that is done the project setup is complete and your project should look lik
 ![Eclipse Workspace with Vaadin Plugin configured](images/eclipse-buildship-workspace.png)
 
 
-### Running the project
+## Running the project
 
 There are two ways you can run the project, either with the vaadinRun task that comes with the Gradle Vaadin Plugin, or with standard Eclipse WTP.
 
-#### Running the project with vaadinRun
+### Running the project with vaadinRun
 The plugin comes with a full JEE application server bundled. 
 
 Whenever you want your project you can just double click on the vaadinRun in the vaadin category in the Gradle Tasks view and the project will be deployed to the server and the server run. An external browser tab will be opened when the project has been deployed and is ready to be used.
@@ -63,7 +63,7 @@ Whenever a class changes the server will then re-deploy.
 
 Stopping the server can be done by pressing the <img alt="Stop task button" src="images/eclipse-stop-task-button.png" /> in the Gradle Executions view. Stopping the server might take some time so be patient, it takes a while for the Gradle process to finish.
 
-#### Running the project with Eclipse WTP
+### Running the project with Eclipse WTP
 Since we are working in Eclipse we can also use just the standard Eclipse WTP server configurations to run the projects with. In that case just configure an appropriate server like Tomcat or TomEE and add the project to the server.
 
 
