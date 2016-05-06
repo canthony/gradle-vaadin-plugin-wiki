@@ -43,7 +43,7 @@ That will configure the wrapper to take Gradle 2.13 into use in your project. Fi
 
 Once the wrapper task has run (might take some time as it downloads Gradle from the internet), you should see something like this in the console:
 
-![Wrapper task completed](images/images/intellij-wrapper-task-completed.png)
+![Wrapper task completed](images/intellij-wrapper-task-completed.png)
 
 Now we are ready to configure the project to become a Vaadin Project!
 
