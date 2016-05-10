@@ -2,7 +2,7 @@
 
 The first step to finding addons to add to your project is to browse the Vaadin Directory and find a suitable addon that solves your problem.
 
-There are two ways you can finds addons.
+There are two ways you can find addons.
 
 ### Using the vaadin.com web site
 
@@ -61,20 +61,3 @@ If you are using *Vaadin 7.7.0+* the widgetset will automatically be detected wh
 ## Addons with custom themes
 
 Some addons might also include a custom SASS theme. The plugin will automatically detect this and add the necessary imports into the project theme (the *addons.scss* file will be updated in your theme).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
