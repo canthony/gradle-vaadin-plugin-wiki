@@ -32,6 +32,10 @@ Total time: 1.574 secs
 
 As you can see, one result was found that you can use in the project. Just as you did when using the Vaadin website, you need to copy the **groupID**, **artifactId** and **version** for later. You can find them in the 3rd column, suitable formatted as string we can later use.
 
+Other options you can use with the *vaadinAddons* task are:
+- **sort** : Sort criteria (options: name,description,date,rating)
+- **verbose**: Should verbose descriptions be shown
+
 
 ## Including the addon in your build
 
@@ -45,12 +49,6 @@ dependencies {
 ```
 
 As you notice, the dependency string is the exact same string as you get from the *vaadinAddons* task. If you are using the Vaadin Directory website you will need to construct that yourself from the **groupID**, **artifactId** and **version** you got. The format is ``<groupId>``:``<artifactId>``:``<version>``.
-
-
-Other options you can use with the *vaadinAddons* task are:
-- **sort** : Sort criteria (options: name,description,date,rating)
-- **verbose**: Should verbose descriptions be shown
-
 
 ## Addons with client-side code
 
