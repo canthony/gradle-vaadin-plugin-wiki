@@ -3,6 +3,7 @@
     1. [[Getting Started on the console]]
     1. [[Getting Started in Eclipse]]
     1. [[Getting Started in Intellij IDEA]]
+    1. [[Converting an existing Maven project]]
 1. [[Using addons]]
 1. [[Debugging]]
 1. [[Custom client side code]]
