@@ -4,6 +4,7 @@
     1. [[Getting Started in Eclipse]]
     1. [[Getting Started in Intellij IDEA]]
     1. [[Converting an existing Maven project]]
+1. [[Tasks]]
 1. [[Using addons]]
 1. [[Debugging]]
 1. [[Custom client side code]]
@@ -14,3 +15,5 @@
     1. [[Using Compass SASS]]
     1. [[Using Vaadin CDN]] 
     1. [[Building addons]]
+1. [[Plugin development]]
+    1. [[Snapshot builds]]
