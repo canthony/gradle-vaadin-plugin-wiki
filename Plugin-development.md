@@ -1,0 +1,1 @@
+This is section is for those brave souls who want to dig into the code of the plugin and build it themselves.
