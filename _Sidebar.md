@@ -1,4 +1,5 @@
 1. [[Home]]
+1. [[Versions]]
 1. [[Getting Started]]
     1. [[Getting Started on the console]]
     1. [[Getting Started in Eclipse]]
