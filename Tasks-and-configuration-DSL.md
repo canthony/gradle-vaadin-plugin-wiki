@@ -4,6 +4,7 @@
 * ``vaadin.manageRepositories`` - Should the plugin add repositories such as maven central and vaadin addons to the project.  Default is true.
 * ``vaadin.mainSourceSet`` - Defines the main source set where all source files will be generated.
 * ``vaadin.push`` - Should vaadin push be enabled for the application. Default is false.
+* ``vaadin.logToConsole`` - Output server logs to console instead of to file. Default is false.
 
 # Addon configurations
 * ``vaadin.addon.author`` - The author of the Vaadin addon.
