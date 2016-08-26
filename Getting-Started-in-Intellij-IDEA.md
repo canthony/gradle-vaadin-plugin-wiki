@@ -52,7 +52,7 @@ Open up the  **build.gradle** file, if you don't already have it open, and add t
 ```gradle
 // Tell Gradle to add Vaadin support
 plugins {
-  id 'fi.jasoft.plugin.vaadin' version '0.11.0-beta'
+  id 'fi.jasoft.plugin.vaadin' version '0.11.1'
 }
 
 // Tell Gradle that we are working in idea
