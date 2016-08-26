@@ -47,7 +47,7 @@ To make the folder a Gradle project it needs to contain a **build.gradle** file,
 ```gradle
 // Tell Gradle to add Vaadin support
 plugins {
-  id 'fi.jasoft.plugin.vaadin' version '0.11.0-beta'
+  id 'fi.jasoft.plugin.vaadin' version '0.11.1'
 }
 ```
  
