@@ -1,4 +1,5 @@
 *Originally posted on http://devsoap.com/converting-a-vaadin-maven-project-to-gradle*
+-
 
 So you started out with creating a new Vaadin project in Eclipse and it created a Maven project and after a while you have noticed it isn't working out for you and want to switch to Gradle to make your life easier.
 
