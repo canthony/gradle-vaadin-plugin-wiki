@@ -39,6 +39,10 @@ Creates a new Vaadin Project.
 * ``widgetset`` - The widgetset name, if applicable.
 By default, if a widgetset is defined, that package is used, otherwise *com.example.\<project name\>* is used.
 
+## vaadinCreateAddonProject
+
+Creates a new Vaadin Project to build an addon for the Vaadin Directory.
+
 ## vaadinCreateTheme
 
 Creates a new Vaadin Theme.
