@@ -9,7 +9,7 @@ An addon project is a project that produces a *jar*-archive or *zip*-archive whi
 
 When building an addon you  also want to create a some kind of demo project that uses the addon and verifies it is working. This project can be used by the addon users to try out the addon as well as by UI testing tools (like Vaadin Testbench) to test with.
 
-The plugin provides a convenient method for creating this kind of addon project since 0.11.3.
+The plugin provides a convenient method for creating this kind of addon project since 0.11.4.
 
 To create a project you will need a starting point so start by creating a new project. 
 
