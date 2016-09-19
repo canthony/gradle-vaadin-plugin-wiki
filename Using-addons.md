@@ -1,61 +1,72 @@
-## Searching for addons in the directory
+##Building addons
 
-The first step to finding addons to add to your project is to browse the Vaadin Directory and find a suitable addon that solves your problem.
+One of Vaadin's strengts is extensibilty, and one of the foundations of that is the Vaadin Directory and its addons.
 
-There are two ways you can find addons.
+Addons are components that you can add to your project and use just as you would any Vaadin component. Addons can be server side only extensions of a Vaadin core component or it can hae both a custom client side implementation and a custom theme if so needed.
 
-### Using the vaadin.com web site
+###Creating a addon project
+An addon project is a project that produces a *jar*-archive or *zip*-archive which can be uploaded to the directory or used straight in your project. 
 
-Browse to https://vaadin.com/directory and type a search term in the search field. Once you have found an addon you like click the green *Install* button (you have to be logged in) and copy the **groupID**, **artifactId** and **version** information from the *Maven* tab. You will need it in the next step.
+When building an addon you  also want to create a some kind of demo project that uses the addon and verifies it is working. This project can be used by the addon users to try out the addon as well as by UI testing tools (like Vaadin Testbench) to test with.
 
+The plugin provides a convienient method for creating this kind of addon project since 0.11.3.
 
-### Using the *vaadinAddons* task
+To create a project you will need a starting point so start by creating a new project. 
 
-The vaadin plugin comes with a gradle task to search for addons. 
+You can do that either by using the console and creating a new folder and an empty **build.gradle** file :
 
-For example to search for a QR code addon you could search by issuing 
-
-```console
-gradle vaadinAddons -Psearch=qr
+```bash
+mkdir myAddonProject
+cd myAddonProject
+echo "plugins { plugin { id 'fi.jasoft.vaadin' version '0.11.3'} }" > build.gradle
 ```
-That would return the following output
-```
-$ gradle vaadinAddons -Psearch=qr
-:vaadinAddons
+
+Or if you are using an IDE create a new simple Gradle project :
+
+![Empty Project](images/intellij-addon-project-empty.png)
+
+
+Next, run the **vaadinCreateAddonProject** task either by double clicking on the task or typing it in the console. 
+
+**Note:**
+In eclipse you need to refresh the project after the task has run. To do that right click on the project and select Gradle -> Refresh Gradle Project. A similar thing  might be needed for Intellij as well.
+
+Once that task is ready and you have refreshed the project, the project should look like this:
+
+![Project ready](images/intellij-addon-project-created.png)
+
+You can run the project by running the **vaadinRun** task using ``gradle vaadinRun`` in the console.
+
+The addon project consists of 3 modules; the parent module, the addon module and the demo module.
+
+
+### The parent module
+
+The parent module is the module you created, the addon and demo modules are its children.
+
+After you have created the project you can remove the dependency to the Vaadin plugin from the parent module if you wish. Just remember to then add it to the demo and child modules or apply it in a ``subprojects { }``-clause in the parent **build.gradle**.
+
+### The addon module
+
+The addon module contains the addon itself. 
+
+The addon jar that you upload to the Vaadin Directory can be found under **build/libs/**. If you just want to build it without building the rest of the projects you can run ``gradle :addon:jar`` in the parent module to generate the jar-archive.
+
+The task creates a pre-configured component for you 3 parts; a server side part, a client side part and a theme.
+
+The server side part is the class you will use in your application. It is called *MyComponent* by default.
+
+The client side parts is the widget and the connector that connects the client side to the server side part. By default these are called *MyComponentWidget* and *MyComponentConnector*. If you don't need a client side implementation you are free to remove these two classes. You can also remove the widgetset if you do not have any client side code.
+
+The theme is located under the **resourcecs** folder and is used to theme the component with. When the Vaadin application theme is compiled this theme will be included in the application theme. You can use it to style the component with Sass or if you don't need a theme for your component you can remove it.
+
+### The demo module
+
+The demo module is used to showcase your addon. 
+
+It depends on the addon module so whenever you change the addon and run the demo the changes are immediatly visible.
+
+You can run the demo by running ``gradle :demo:vaadinRun`` from the console.
+
  
-QRCode                        Add QR codes to your Vaadin applications           "org.vaadin.addons:qrcode:2.0.1" 
 
-BUILD SUCCESSFUL
-
-Total time: 1.574 secs
-```
-
-As you can see, one result was found that you can use in the project. Just as you did when using the Vaadin website, you need to copy the **groupID**, **artifactId** and **version** for later. You can find them in the 3rd column, suitable formatted as string we can later use.
-
-Other options you can use with the *vaadinAddons* task are:
-- **sort** : Sort criteria (options: name,description,date,rating)
-- **verbose**: Should verbose descriptions be shown
-
-
-## Including the addon in your build
-
-Once you have found the addons **groupID**, **artifactId** and **version** you can add it to your build
-
-In your build.gradle add the following:
-```
-dependencies {	
-	compile "org.vaadin.addons:qrcode:2.0.1" 
-}
-```
-
-As you notice, the dependency string is the exact same string as you get from the *vaadinAddons* task. If you are using the Vaadin Directory website you will need to construct that yourself from the **groupID**, **artifactId** and **version** you got. The format is ``<groupId>``:``<artifactId>``:``<version>``.
-
-## Addons with client-side code
-
-Some addons might include code that is executed in the browser. If that is the case the addons client side code need to be included in the projects widgetset. If you previously don't have a widgetset in your project, the plugin will create one for you called **AppWidgetset**.
-
-If you are using *Vaadin 7.7.0+* the widgetset will automatically be detected when you start your application the next time but if you are using an older version of Vaadin you will need to add the ``@Widgetset("AppWidgetset")`` annotation to your UI class so the UI can find the new widgetset.
-
-## Addons with custom themes
-
-Some addons might also include a custom SASS theme. The plugin will automatically detect this and add the necessary imports into the project theme (the *addons.scss* file will be updated in your theme).
