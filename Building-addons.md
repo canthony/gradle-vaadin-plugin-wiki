@@ -18,7 +18,7 @@ You can do that either by using the console and creating a new folder and an emp
 ```bash
 mkdir myAddonProject
 cd myAddonProject
-echo "plugins { plugin { id 'fi.jasoft.vaadin' version '0.11.3'} }" > build.gradle
+echo "plugins { plugin { id 'fi.jasoft.vaadin' version '0.11.4'} }" > build.gradle
 ```
 
 Or if you are using an IDE create a new simple Gradle project :
