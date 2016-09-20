@@ -1,15 +1,15 @@
 ##Building addons
 
-One of Vaadin's strengts is extensibilty, and one of the foundations of that is the Vaadin Directory and its addons.
+One of Vaadin's strengths is extensibility, and one of the foundations of that is the Vaadin Directory and its addons.
 
-Addons are components that you can add to your project and use just as you would any Vaadin component. Addons can be server side only extensions of a Vaadin core component or it can hae both a custom client side implementation and a custom theme if so needed.
+Addons are components that you can add to your project and use just as you would any Vaadin component. Addons can be server side only extensions of a Vaadin core component or it can have both a custom client side implementation and a custom theme if so needed.
 
 ###Creating a addon project
 An addon project is a project that produces a *jar*-archive or *zip*-archive which can be uploaded to the directory or used straight in your project. 
 
 When building an addon you  also want to create a some kind of demo project that uses the addon and verifies it is working. This project can be used by the addon users to try out the addon as well as by UI testing tools (like Vaadin Testbench) to test with.
 
-The plugin provides a convienient method for creating this kind of addon project since 0.11.3.
+The plugin provides a convenient method for creating this kind of addon project since 0.11.4.
 
 To create a project you will need a starting point so start by creating a new project. 
 
@@ -18,7 +18,7 @@ You can do that either by using the console and creating a new folder and an emp
 ```bash
 mkdir myAddonProject
 cd myAddonProject
-echo "plugins { plugin { id 'fi.jasoft.vaadin' version '0.11.3'} }" > build.gradle
+echo "plugins { plugin { id 'fi.jasoft.vaadin' version '0.11.4'} }" > build.gradle
 ```
 
 Or if you are using an IDE create a new simple Gradle project using Gradle BuildShip or Intellij JetGradle.
@@ -61,7 +61,7 @@ The theme is located under the **resourcecs** folder and is used to theme the co
 
 The demo module is used to showcase your addon. 
 
-It depends on the addon module so whenever you change the addon and run the demo the changes are immediatly visible.
+It depends on the addon module so whenever you change the addon and run the demo the changes are immediately visible.
 
 You can run the demo by running ``gradle :demo:vaadinRun`` from the console.
 
