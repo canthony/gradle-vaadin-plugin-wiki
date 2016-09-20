@@ -21,19 +21,16 @@ cd myAddonProject
 echo "plugins { plugin { id 'fi.jasoft.vaadin' version '0.11.3'} }" > build.gradle
 ```
 
-Or if you are using an IDE create a new simple Gradle project :
-
-![Empty Project](images/intellij-addon-project-empty.png)
-
+Or if you are using an IDE create a new simple Gradle project using Gradle BuildShip or Intellij JetGradle.
 
 Next, run the **vaadinCreateAddonProject** task either by double clicking on the task or typing it in the console. 
 
 **Note:**
-In eclipse you need to refresh the project after the task has run. To do that right click on the project and select Gradle -> Refresh Gradle Project. A similar thing  might be needed for Intellij as well.
+*In eclipse you need to refresh the project after the task has run. To do that right click on the project and select Gradle -> Refresh Gradle Project. A similar thing  might be needed for Intellij as well.*
 
 Once that task is ready and you have refreshed the project, the project should look like this:
 
-![Project ready](images/intellij-addon-project-created.png)
+![Empty Project](images/GradleAddonProject.gif)
 
 You can run the project by running the **vaadinRun** task using ``gradle vaadinRun`` in the console.
 
