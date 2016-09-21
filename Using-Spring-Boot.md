@@ -1,0 +1,1 @@
+See [Building Spring Boot Vaadin Applications With Gradle](https://devsoap.com/building-spring-boot-vaadin-applications-with-gradle/) (external link)
