@@ -11,6 +11,7 @@
 1. [[Custom client side code]]
 1. [[Advanced]]
     1. [[Using CDI/EJB]]
+    1. [[Using Spring Boot]]
     1. [[Optimizing your widgetset]]
     1. [[Using Vaadin Testbench]]
     1. [[Using Compass SASS]]
