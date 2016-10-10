@@ -31,13 +31,13 @@ Now, all that remains is making this project a Vaadin project.
 Unfortunately before we can configure the Vaadin project we need to update the Gradle version for the project since Intellij ships with an old version of the Gradle wrapper which the Vaadin plugin cannot use. To do that, open up **build.gradle** and add the following to configure the *Gradle Wrapper* version:
 
 ```gradle
-// Vaadin plugin requires Gradle 2.12+
+// Vaadin plugin requires Gradle 3.0+
 task wrapper(type: Wrapper) {
-	gradleVersion = '2.13'
+	gradleVersion = '3.0'
 }
 ```
 
-That will configure the wrapper to take Gradle 2.13 into use in your project. Finally, we need to run the **wrapper** task so the new Gradle distribution is downloaded and installed into your project. To do that go to the *Gradle Projects* panel and double-click on the **wrapper** task in the *build-setup* category:
+That will configure the wrapper to take Gradle 3.0 into use in your project. Finally, we need to run the **wrapper** task so the new Gradle distribution is downloaded and installed into your project. To do that go to the *Gradle Projects* panel and double-click on the **wrapper** task in the *build-setup* category:
 
 ![Wrapper task](images/intellij-wrapper-task.png)
 
@@ -52,7 +52,7 @@ Open up the  **build.gradle** file, if you don't already have it open, and add t
 ```gradle
 // Tell Gradle to add Vaadin support
 plugins {
-  id 'fi.jasoft.plugin.vaadin' version '0.11.1'
+  id 'fi.jasoft.plugin.vaadin' version '1.0'
 }
 
 // Tell Gradle that we are working in idea
@@ -83,12 +83,3 @@ Now when you want to run the project, just type in ``gradle vaadinRun`` and the 
 ![Running project](images/intellij-run-project.png)
 
 A benefit from running from the terminal is that you can see the server logs directly as you run the application if you add ``vaadinRun.logToConsole true`` to **build.gradle**.
-
-
-
-
-
-
-
-
-
