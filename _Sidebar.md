@@ -14,7 +14,7 @@
     1. [[Using Spring Boot]]
     1. [[Optimizing your widgetset]]
     1. [[Using Vaadin Testbench]]
-    1. [[Using Compass SASS]]
+    1. [[Compiling theme with Compass or libSass]]
     1. [[Using Vaadin CDN]] 
     1. [[Building addons]]
 1. [[Plugin development]]
