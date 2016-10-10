@@ -24,7 +24,7 @@ To make the project a Vaadin project we need to add a Vaadin plugin to our build
 ```gradle
 // Tell Gradle to add Vaadin support
 plugins {
-  id 'fi.jasoft.plugin.vaadin' version '0.11.1'
+  id 'fi.jasoft.plugin.vaadin' version '1.0'
 }
 
 // Tell Gradle that we are working in eclipse
