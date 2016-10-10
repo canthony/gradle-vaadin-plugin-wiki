@@ -141,7 +141,7 @@ Compiles Vaadin Addons and components into Javascript.
 Compiles a Vaadin SASS theme into CSS.
 
 ### Configurations
-* ``compiler`` - The SASS compiler to use. *vaadin* and *compass* are available. *vaadin* is default.
+* ``compiler`` - The SASS compiler to use. *vaadin*,*compass* and *libsass* are available. *vaadin* is default.
 * ``themesDirectory`` - Root directory for themes. By default *src/main/webapp/VAADIN/themes*
 
 ## vaadinRun
