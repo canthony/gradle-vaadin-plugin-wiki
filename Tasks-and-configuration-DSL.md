@@ -1,3 +1,20 @@
+# Configuration
+
+The configuration settings detailed below are specified by providing appropriately named closures in the build.gradle configuration file. For example
+
+```
+vaadin {
+    version '7.7.3'
+    
+    addon {
+      title 'Spinning Wheel'
+      author 'Johnny Appleseed'
+    }
+}
+```
+
+An example gradle build file with illustrating many of the configuration settings can be found [here](https://gist.github.com/johndevs/11184881)
+
 ## Main configuration
 * ``vaadin.version`` - Vaadin version. Defaults to latest Vaadin 7
 * ``vaadin.manageDependencies`` - Should the plugin manage the Vaadin depencies for you. Default is true.
@@ -13,6 +30,16 @@
 * ``vaadin.addon.styles`` - An array of paths relative to webroot (eg. '/VAADIN/addons/myaddon/myaddon.scss') where CSS and SCSS files for an addon can be found.
 
 # Plugin tasks
+
+When calling tasks, you can supply values for parameters after the command name, prefixed by double hyphens.
+Syntax : `gradle <command> --<parameter-name>=<parameter-value>`
+
+For Example:
+
+```
+gradle vaadinCreateTheme --name=funky-new-theme-name
+```
+
 
 ## vaadinCreateComponent
 
